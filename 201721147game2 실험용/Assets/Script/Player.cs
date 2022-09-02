@@ -89,23 +89,4 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-    //  void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     if (collision.gameObject.tag == "Item"){
-    //     //점수
-    //         bool ATUP = collision.gameObject.name.Contains("ATUP");
-    //         bool SPUP = collision.gameObject.name.Contains("SPUP");
-            
-    //         if(ATUP)
-    //         {
-    //            bullet bullet = collision.gameObject.GetComponent<bullet>();
-    //            bullet.Atup();
-    //         }
-    //         collision.gameObject.SetActive(false);
-
-    //         Debug.Log('됨');
-    //     }
-    // }
-
 }

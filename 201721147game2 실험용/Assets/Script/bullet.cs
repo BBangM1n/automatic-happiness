@@ -43,8 +43,5 @@ public class bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // public void Atup()
-    // {
-    //     dmg += 1;
-    // }
+    
 }
