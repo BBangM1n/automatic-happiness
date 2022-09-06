@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameManager gameManager;
     Rigidbody2D rigid;
     Animator anim;
 
@@ -88,5 +89,17 @@ public class Player : MonoBehaviour
                 }  
             }
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Finish"){
+            gameManager.NextStage();
+        }
+    }
+
+    public void VelocityZero()
+    {
+        rigid.velocity = Vector2.zero;
     }
 }
