@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ASUP : MonoBehaviour
+public class ASUP : item
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject PlayerAttack;
+    public override void RunItem()
     {
-        
+        DestroyObject();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DestroyObject()
     {
-        
+        Destroy(gameObject);
+    }
+
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.CompareTag("Player"))
+        {
+            RunItem();
+        }
     }
 }

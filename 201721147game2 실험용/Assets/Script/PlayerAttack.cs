@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Cooltime();
     }
 
     // Update is called once per frame
@@ -43,4 +43,8 @@ public class PlayerAttack : MonoBehaviour
         curtime += Time.deltaTime;
     }
 
+    public void Cooltime()
+    {
+        cooltime = 0.3f;
+    }
 }
